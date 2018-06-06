@@ -5,7 +5,5 @@ applications:
   memory: 256M
   host: registration-pal-dlw
   path: Applications/RegistrationServer/bin/Release/netcoreapp2.0/publish
-  env:
-    REGISTRATION_SERVER_ENDPOINT: http://registration-pal-dlw.apps.pikes.pal.pivotal.io
   services:
   - tracker-registration-database
