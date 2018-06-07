@@ -85,7 +85,7 @@ namespace IntegrationTest
 
             response = _httpClient.Get(_registrationServer.Url($"/projects?accountId={createdAccountId}"));
             AssertNotNullOrEmpty(response.Content.AsString());
-            Assert.True(response.IsSuccessStatusCode);
+            Assert.True(response.IsSuccessStatusCode);                                                         
 
             response = _httpClient.Get(_allocationsServer.Url());
             Assert.Equal("Noop!", response.Content.AsString());

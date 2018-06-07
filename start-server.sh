@@ -2,8 +2,10 @@
 
 set -e
 
-declare -a apps=( "Registration" "Allocations" "Backlog" "Timesheets" )
-declare -a ports=( 8883 8881 8882 8884 )
+#declare -a apps=( "Registration" "Allocations" "Backlog" "Timesheets" )
+#declare -a ports=( 8883 8881 8882 8884 )
+declare -a apps=( "Allocations" "Backlog" "Timesheets" )
+declare -a ports=( 8881 8882 8884 )
 
 function usage() {
     echo -e "\nStarts a specific server or all servers if the name is omitted.\n\nUsage:\n\n$0 [$(join_by ' | ' "${apps[@]}")]\n"
@@ -35,4 +37,6 @@ trap "kill 0" EXIT
             start_server "$app" "${ports[$i]}" &
         fi
     done
+
+    
 wait

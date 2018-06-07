@@ -1,7 +1,7 @@
 
 
 curl -i -XPOST -H"Content-Type: application/json" registration-pal-dlw.apps.pikes.pal.pivotal.io/registration -d'{"name": "Pete"}'
-curl -i registration-pal-dlw.apps.pikes.pal.pivotal.io/users/1
+curl -i registration-pal-dlw.apps.pikes.pal.pivotal.io/users/4
 
 curl -i registration-pal-dlw.apps.pikes.pal.pivotal.io/accounts?ownerId=1
 
